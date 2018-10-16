@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bdi.sp.JapanMapper">
   <select id="selectJapanList" resultType="com.bdi.sp.vo.Japan">
-    select * from japan
+    select jpnum as id, j.* from japan j
     <where>
     	<if test="jpname!=null"> and jpname=#{jpname}</if>
     	<if test="jpnum!=null"> and jpnum=#{jpnum}</if>
